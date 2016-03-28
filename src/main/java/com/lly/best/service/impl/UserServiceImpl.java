@@ -23,7 +23,6 @@ public class UserServiceImpl implements UserService{
 	@Resource
 	private UserDao userdao;
 
-	@Override
 	public User findUser(LoginForm loginForm) {
 		return userdao.findUser(loginForm);
 	}

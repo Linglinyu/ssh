@@ -6,9 +6,9 @@ import com.lly.best.dto.LoginForm;
 import com.lly.best.entity.User;
 
 /**
- * 类描述: 
+ * 类描述: userDao
  * 修改人: 程文席
- * 修改时间: 2015-12-12 12:00
+ * 修改时间: 2016-03-28 12:00
  * 修改备注: 
  * @version V1.0
  */
