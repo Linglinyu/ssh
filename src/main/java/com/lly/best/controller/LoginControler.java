@@ -30,11 +30,11 @@ public class LoginControler {
 	
 	@RequestMapping(value="login")
 	     public ModelAndView login(HttpServletRequest request,HttpServletResponse response,LoginForm command ){
-	         String username = command.getUsername();
+	         String name = command.getName();
 	         User user = new User();
 	         user = userService.findUser(command);
 	         String password = user.getPassword();
-	         ModelAndView mv = new ModelAndView("/index/index","command","LOGIN SUCCESS, " + username +","+ password);
+	         ModelAndView mv = new ModelAndView("/index/index","command","LOGIN SUCCESS, " + name +","+ password);
 	         return mv;
 	     }
 

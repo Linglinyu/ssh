@@ -12,10 +12,16 @@
     <!-- 激活@Controller模式 -->
     <mvc:annotation-driven />
     <!-- 对包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 需要更改 -->
-<!--     <context:component-scan base-package="com.lly.best.controller" /> -->
+    <context:component-scan base-package="com.lly.best.controller" />
+<!--     	<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/> -->
+<!--     </context:component-scan> -->
+<!-- 	<context:component-scan  -->
+<!-- 	base-package="com.lly.best.dao, -->
+<!-- 	              com.lly.best.service, -->
+<!-- 	              com.lly.best.controller"/> -->
 
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
-
+    
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
             <value>/WEB-INF/jsp/</value>

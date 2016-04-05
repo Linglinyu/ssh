@@ -3,6 +3,7 @@ package com.lly.best.service.impl;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.lly.best.dao.UserDao;
 import com.lly.best.dto.LoginForm;
@@ -23,6 +24,7 @@ public class UserServiceImpl implements UserService{
 	@Resource
 	private UserDao userdao;
 
+	@Transactional
 	public User findUser(LoginForm loginForm) {
 		return userdao.findUser(loginForm);
 	}
